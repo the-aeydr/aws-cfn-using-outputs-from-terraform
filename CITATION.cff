@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you refer to this article, please cite it as below."
+
+version: 1.0.0
+date-released: 2023-07-09
+title: "Using empty CloudFormation Stacks to publish outputs for CloudFormation"
+url: "https://writing.aeydr.dev/notes/aws-cfn-using-outputs-from-terraform"
+authors:
+- given-names: "aeydr"
+
+preferred-citation:
+  type: article
+  journal: "The Architectural Decision Record"
+  authors:
+  - given-names: "aeydr"
+
+  title: "Using empty CloudFormation Stacks to publish outputs for CloudFormation"
+  month: 07
+  year: 2023
