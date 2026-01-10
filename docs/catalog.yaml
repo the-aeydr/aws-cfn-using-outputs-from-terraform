@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: aws-cfn-using-outputs-from-terraform
+  description: Using CloudFormation Stacks with only outputs to manage dependency constraints with Terraform
+  tags:
+    - aws
+    - aws
+  annotations:
+    displayName: Using empty CloudFormation Stacks to publish outputs for CloudFormation
+    github.com/project-slug: the-aeydr/aws-cfn-using-outputs-from-terraform
+spec:
+  type: documentation
+  lifecycle: experimental

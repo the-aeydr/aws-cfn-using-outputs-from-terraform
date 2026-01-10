@@ -1,0 +1,7 @@
+image: ghcr.io/slashatelier/awscloud:latest
+
+vscode:
+  extensions:
+    - pkief.material-icon-theme
+    - hashicorp.terraform
+    - ms-vscode.makefile-tools

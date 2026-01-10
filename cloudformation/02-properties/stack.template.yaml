@@ -1,0 +1,31 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+# The empty resource configuration that allows for testing against just mappings, parameters, and
+# outputs. To force a new update, the `LogicalID` of this must be re-generated as this resource
+# does not support updates.
+Resources:
+  WaitHandle:
+    Type: AWS::CloudFormation::WaitConditionHandle
+
+# -------------------------------------------------
+Description: Retrieving a set of values from a output-only CloudFormation stack
+
+Outputs:
+  PrefixListID:
+    Description: GlobalGroundstation PrefixListID 
+    Value:
+      Fn::Sub:
+        - "{{resolve:ssm:${Stack}}}"
+        - Stack:
+            Fn::ImportValue: 'aws-cfn-using-outputs-from-terraform-outputs-params-GlobalGroundstation'
+  ParameterStore:
+    Description: The name of the GlobalGroundstation parameter store value 
+    Value:
+      Fn::ImportValue: 'aws-cfn-using-outputs-from-terraform-outputs-params-GlobalGroundstation'
+
+  PrefixListIDByCfn:
+    Description: GlobalGroundstation PrefixListID from CloudFormation 
+    Value:
+      Fn::ImportValue: 'aws-cfn-using-outputs-from-terraform-outputs-GlobalGroundstation'
+# -------------------------------------------------
